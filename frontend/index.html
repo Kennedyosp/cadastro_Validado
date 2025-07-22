@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <main id="form_container">
+      <div id="form_header">
+        <h1 id="form_title">Cadastro</h1>
+      </div>
+      <form id="form">
+        <div id="input_container">
+          <div class="input-box">
+            <label for="name" class="form-label">Primeiro nome</label>
+            <div class="input-field">
+              <input
+                type="text"
+                id="name"
+                class="form-control"
+                placeholder="Primeiro nome"
+              />
+            </div>
+            <span class="error"></span>
+          </div>
+          <div class="input-box">
+            <label for="last_name" class="form-label">Último nome</label>
+            <div class="input-field">
+              <input
+                type="text"
+                id="last_name"
+                class="form-control"
+                placeholder="Último nome"
+              />
+            </div>
+            <span class="error"></span>
+          </div>
+          <div class="input-box">
+            <label for="birthdate" class="form-label">Data de nascimento</label>
+            <div class="input-field">
+              <input type="date" id="birthdate" class="form-control" />
+            </div>
+            <span class="error"></span>
+          </div>
+          <div class="input-box">
+            <label for="email" class="form-label">E-mail</label>
+            <div class="input-field">
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="seu@email.com"
+              />
+            </div>
+            <span class="error"></span>
+          </div>
+        </div>
+        <button type="submit" class="btn-default" id="btnSalvar">Salvar</button>
+        <button type="button" class="btn-default" onclick="cadastro.cancelar()">
+          Cancelar
+        </button>
+      </form>
+
+      <div class="content">
+        <table border="1">
+          <thead>
+            <tr>
+              <th class="center">ID</th>
+              <th>Nome Completo</th>
+              <th>Data de Nascimento</th>
+              <th>Email</th>
+              <th class="center">Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
